@@ -63,7 +63,7 @@ const Testimonial = () => {
   };
   return (
     <>
-      <div data-aos="fade-up" data-aos-duration="300" className="py-10">
+      <div data-aos="fade-up" data-aos-duration="300" className="py-10 dark:bg-black/80 dark:text-white">
         <div className="container">
           {/* Header section */}
           <div className="text-center mb-20 max-w-[400px] mx-auto">
@@ -82,13 +82,13 @@ const Testimonial = () => {
           <div
             data-aos="zoom-in"
             data-aos-duration="300"
-            className="grid grid-cols-1 max-w-[800px] mx-auto gap-6"
+            className="grid grid-cols-1 max-w-[800px] mx-auto gap-6 "
           >
             <Slider {...settings}>
               {testimonialData.map(({ id, name, text, img }) => {
                 return (
                   <div key={id} className="my-6">
-                    <div className="flex flex-col justify-center items-center gap-4 text-center shadow-lg p-4 mx-4 rounded-xl bg-primary/10 relative">
+                    <div className="flex flex-col justify-center items-center gap-4 text-center shadow-md p-4 mx-4 rounded-xl bg-primary/10 relative dark:shadow-black hover:shadow-lg">
                       <img
                         src={img}
                         alt=""

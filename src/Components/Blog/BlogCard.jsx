@@ -16,7 +16,7 @@ const BlogCard = ({ image, date, title, description, author }) => {
         }}
         state={{ image, date, title, description, author }}
       >
-        <div className="p-4 shadow-lg transition-all duration-500 hover:shadow-xl ">
+        <div className="p-4 shadow-lg transition-all duration-500 hover:shadow-xl  dark:bg-black/50 dark:text-white dark:shadow-black">
           <div className="overflow-hidden">
             <img
               src={image}

@@ -22,7 +22,7 @@ const App = () => {
     AOS.refresh();
   }, []);
   return (
-    <>
+    <div>
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Layout />}>
@@ -35,7 +35,7 @@ const App = () => {
           </Route>
         </Routes>
       </BrowserRouter>
-    </>
+    </div>
   );
 };
 

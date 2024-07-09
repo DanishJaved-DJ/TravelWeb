@@ -10,14 +10,14 @@ const BlogsDetails = (props) => {
 
   return (
     <div className=" pt-20">
-      <div className="h-[300px] overflow-hidden">
+      <div className="h-[300px] overflow-hidden ">
         <img
           src={image}
           alt={title}
-          className="mx-auto h-[300px] w-full object-cover transition duration-700 hover:scale-110"
+          className="mx-auto h-[300px] w-full object-cover transition duration-700 hover:scale-110 "
         />
       </div>
-      <div className="container ">
+      <div className="container shadow-sm hover:shadow-md dark:bg-black/80 dark:text-white dark:shadow-black">
         <p className="text-slate-600 text-sm py-3">
           {" "}
           written by {author} on {date}

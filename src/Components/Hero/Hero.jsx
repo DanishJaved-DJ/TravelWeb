@@ -22,7 +22,7 @@ const Hero = () => {
           <div
             data-aos="fade-up"
             data-aos-delay="600"
-            className="space-y-4 bg-white rounded-md p-4 relative"
+            className="space-y-4 bg-white/80 rounded-md p-4 shadow-md shadow-primary relative dark:bg-black/50 dark:text-white dark:shadow-primary"
           >
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 py-3">
               <div>
@@ -34,7 +34,7 @@ const Hero = () => {
                   name="destination"
                   id="destination"
                   placeholder="Dubai"
-                  className="w-full bg-gray-100 my-2 range accent-primary focus:outline-primary focus:outline outline-1 rounded-full p-2"
+                  className="w-full bg-gray-100 my-2 range accent-primary focus:outline-primary focus:outline outline-1 rounded-full p-2 dark:bg-gray-700"
                 />
               </div>
               <div>
@@ -45,7 +45,7 @@ const Hero = () => {
                   type="date"
                   name="destination"
                   id="destination"
-                  className="w-full !placeholder-slate-400 bg-gray-100 my-2 rounded-full focus:outline-primary focus:outline outline-1 p-2"
+                  className="w-full !placeholder-slate-400 bg-gray-100 my-2 rounded-full focus:outline-primary focus:outline outline-1 p-2 dark:bg-gray-700"
                 />
               </div>
               <div>
@@ -55,12 +55,12 @@ const Hero = () => {
                     <p className="font-bold text-xl">$ {priceValue}</p>
                   </div>
                 </label>
-                <div className=" bg-gray-100 rounded-full p-2 flex items-center justify-center ">
+                <div className=" bg-gray-100 rounded-full p-2 flex items-center justify-center dark:bg-gray-700 ">
                   <input
                     type="range"
                     name="destination"
                     id="destination"
-                    className="appearance-none w-full bg-gradient-to-r from-primary to-secondary h-2 rounded-full my-2"
+                    className="appearance-none w-full bg-gradient-to-r from-primary to-secondary h-2 rounded-full my-2 "
                     min="150"
                     max="1000"
                     value={priceValue}

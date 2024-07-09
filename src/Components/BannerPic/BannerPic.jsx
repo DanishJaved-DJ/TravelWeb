@@ -8,7 +8,9 @@ const BannerPic = ({ img }) => {
     height: "400px",
   };
   return (
-    <div data-aos="zoom-in" className="h-[400px] w-full" style={bgImage}></div>
+   <div className="dark:bg-black/80">
+     <div data-aos="zoom-in" className="h-[400px] w-full" style={bgImage}></div>
+   </div>
   );
 };
 

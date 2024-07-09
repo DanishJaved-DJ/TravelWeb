@@ -4,8 +4,8 @@ import Location from "../Components/Location/Location";
 
 const About = () => {
   return (
-    <>
-      <div className="container pt-14">
+    <div className="dark:bg-black/80">
+      <div className="container pt-14 dark:bg-gray-600  dark:text-white rounded-lg shadow-sm dark:shadow-white">
         <div className="py-10">
           <h1 className=" my-8 border-l-8 border-primary/50 py-2 pl-2 text-3xl font-bold">
             About us
@@ -34,7 +34,7 @@ const About = () => {
       </div>
       <Location />
       <BlogsComp />
-    </>
+    </div>
   );
 };
 

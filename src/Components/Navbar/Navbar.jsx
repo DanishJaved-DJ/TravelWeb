@@ -1,7 +1,8 @@
-import React, { useState } from "react";
+import React, { useState ,useEffect } from "react";
 import Logo from "../../assets/logo.png";
 import { NavLink, Link } from "react-router-dom";
 import { FaCaretDown } from "react-icons/fa";
+import { BiSolidSun,BiSolidMoon } from "react-icons/bi";
 import ResponsiveMenu from "./ResponsiveMenu";
 import { HiMenuAlt3, HiMenuAlt1 } from "react-icons/hi";
 
@@ -42,12 +43,26 @@ const DropdownLinks = [
 const Navbar = ({ handleOrderPopup }) => {
   const [showMenu, setShowMenu] = useState(false);
 
+  const [theme, setTheme] = useState("dark");
+
   const toggleMenu = () => {
     setShowMenu(!showMenu);
   };
+ 
+  useEffect(() => {
+    if (theme=="dark") {
+      document.body.classList.add('dark');
+      console.log(theme);
+    } else {
+      document.body.classList.remove('dark');
+       console.log(theme);
+
+    }
+  }, [theme]); 
+
   return (
     <>
-      <nav className="fixed top-0 right-0 w-full z-50 bg-white backdrop-blur-sm text-black shadow-md">
+      <nav className="fixed top-0 right-0 w-full z-50 bg-white/70 backdrop-blur-sm text-black shadow-md dark:bg-black/70 dark:text-white">
         <div className="bg-gradient-to-r from-primary to-secondary text-white ">
           <div className="container py-[2px] sm:block hidden">
             <div className="flex items-center justify-between">
@@ -113,6 +128,24 @@ const Navbar = ({ handleOrderPopup }) => {
                 </li>
               </ul>
             </div>
+               {/* night mode */}
+               <div className="bg-primary/40 rounded-full flex items-center justify-between">
+               <div>
+               {theme === "dark" ? (
+                <BiSolidSun
+                  onClick={() => setTheme("light")}
+                  className="text-2xl"
+                />
+              ) : (
+                <BiSolidMoon
+                  onClick={() => setTheme("dark")}
+                  className="text-2xl"
+                />
+              )}
+               </div>
+               </div>
+
+
             <div className="flex items-center gap-4">
               <button
                 className="bg-gradient-to-r from-primary to-secondary hover:bg-bg-gradient-to-r hover:from-secondary hover:bg-primary transition-all duration-600 text-white px-3 py-1 rounded-full"

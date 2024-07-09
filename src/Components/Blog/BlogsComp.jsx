@@ -37,7 +37,7 @@ const BlogsData = [
 const BlogsComp = () => {
   return (
     <>
-      <div className=" py-10">
+      <div className=" py-10 dark:bg-black/80 dark:text-white">
         <section data-aos="fade-up" className="container ">
           <h1 className=" my-8 border-l-8 border-primary/50 py-2 pl-2 text-3xl font-bold">
             Our Latest Blogs
