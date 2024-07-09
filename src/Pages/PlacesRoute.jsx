@@ -1,5 +1,5 @@
 import React from "react";
-import Places from "../Components/Places/Places"
+import Places from "../Components/Place/Places";
 
 const PlacesRoute = () => {
   return (

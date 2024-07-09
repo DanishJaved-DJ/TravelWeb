@@ -1,11 +1,7 @@
 import React from "react";
-import AOS from 'aos';
-import 'aos/dist/aos.css';
-
-AOS.init()
 
 const Hero = () => {
-  const [priceValue, setPriceValue] = React.useState(40);
+  const [priceValue, setPriceValue] = React.useState(30);
 
   return (
     <div className=" bg-black/20 h-full">
@@ -23,7 +19,6 @@ const Hero = () => {
               Search Your Destination
             </p>
           </div>
-          {/* form section  */}
           <div
             data-aos="fade-up"
             data-aos-delay="600"
@@ -66,7 +61,7 @@ const Hero = () => {
                     name="destination"
                     id="destination"
                     className="appearance-none w-full bg-gradient-to-r from-primary to-secondary h-2 rounded-full my-2"
-                    min="40"
+                    min="150"
                     max="1000"
                     value={priceValue}
                     step="10"

@@ -1,16 +1,23 @@
-import React from 'react'
-import Navbar from '../Components/Navbar/Navbar';
-import Footer from '../Components/Footer/Footer';
-import {Outlet} from 'react-router-dom';
+import React from "react";
+import Navbar from "../Components/Navbar/Navbar";
+import { Outlet, Link } from "react-router-dom";
+import Footer from "../Components/Footer/Footer";
+import OrderPopup from "../Components/OrderPopup/OrderPopup";
 
 const Layout = () => {
+  const [orderPopup, setOrderPopup] = React.useState(false);
+
+  const handleOrderPopup = () => {
+    setOrderPopup(!orderPopup);
+  };
   return (
-    <div>
-      <Navbar/>
-     <Outlet/>
-     <Footer/>
-    </div>
-  )
-}
+    <>
+      <Navbar handleOrderPopup={handleOrderPopup} />
+      <Outlet />
+      <Footer />
+      <OrderPopup orderPopup={orderPopup} setOrderPopup={setOrderPopup} />
+    </>
+  );
+};
 
 export default Layout;

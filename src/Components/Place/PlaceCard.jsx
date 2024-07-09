@@ -13,7 +13,7 @@ const PlaceCard = ({
   return (
     <>
       <div
-        className="shadow-lg transition-all duration-500 hover:shadow-xl cursor-pointer"
+        className="shadow-lg transition-all duration-500 hover:shadow-xl  cursor-pointer"
         onClick={handleOrderPopup}
       >
         <div className="overflow-hidden">
